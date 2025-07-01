@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: chat
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+
+  ai:
+    vectorstore:
+      pgvector:
+        index-type: hnsw
+        distance-type: cosine_distance
+        dimensions: 1536
+        initialize-schema: true
+    openai:
+      api-key: ${OPENAI_API_KEY}
+
