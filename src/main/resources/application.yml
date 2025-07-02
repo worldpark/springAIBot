@@ -1,3 +1,7 @@
+server:
+  forward-headers-strategy: framework
+  port: 8080
+
 spring:
   application:
     name: chat
@@ -16,4 +20,6 @@ spring:
         initialize-schema: true
     openai:
       api-key: ${OPENAI_API_KEY}
+
+
 
